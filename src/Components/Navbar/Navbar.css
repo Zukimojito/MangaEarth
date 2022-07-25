@@ -41,31 +41,19 @@ nav{
 .btn-nav{
     display: none;
     position : absolute;
-    top : 30px;
-    right : 15px;
-    padding: 5px;
-    color: black;
-    font-size: 18px;
+    top : 5px;
+    right : 5px;
+    padding : 5px;
+    color : black;
     outline: 0;
-    border : none;
+    border: none;
     background: transparent;
-    cursor: pointer;
-}
-
-.btn-nav span{
-    display : block;
-    width : 30px;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 8px;
 }
 
 
 @media screen and (max-width : 600px){
 
-
     .btn-nav{
         display: block;
     }
-
 }

@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 import NavbarSide from '../NavbarSide/NavbarSide';
+import Hamburger from 'hamburger-react'
 // import MangaEarth from '../../Assets/MangaEarth.png'
 
 export default function Navbar() {
@@ -9,7 +10,6 @@ export default function Navbar() {
     const [ToggleMenu, setToggleMenu] = useState(false);
     const [BaseWidth, setBaseWidth] = useState(window.innerWidth);
 
-    
     const setToggleNav = () => {
         setToggleMenu(!ToggleMenu);
     }
@@ -40,7 +40,6 @@ export default function Navbar() {
             <li className='Item-navbar'>Manga</li>
             <li className='Item-navbar'>Characters</li>
             <li className='Item-navbar'>Contact</li>
-
         </ul>
 
         )}
@@ -52,11 +51,9 @@ export default function Navbar() {
         ))}
 
         <button onClick={setToggleNav} className='btn-nav'>
-            <span></span>
-            <span></span>
-            <span></span>
+            <Hamburger color="#000" toggled={ToggleMenu}  />
         </button>
-
+ 
     </nav>
   )
 }
