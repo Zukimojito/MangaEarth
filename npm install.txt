@@ -2,4 +2,4 @@ npm install @reduxjs/toolkit       	==> {configureStore}
 npm install redux-thunk		   	==> thunk	
 npm install react-redux			==> {Provider}
 npm install react-router-dom		==> {BrowserRouter}, {Link}
-npm install hamburger-react     ==> Toggle Hamburger
+npm install hamburger-react     	==> Toggle Hamburger
