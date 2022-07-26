@@ -3,7 +3,7 @@ import './Navbar.css'
 import {Link} from 'react-router-dom'
 import NavbarSide from '../NavbarSide/NavbarSide';
 import Hamburger from 'hamburger-react'
-// import MangaEarth from '../../Assets/MangaEarth.png'
+import icon from '../../Assets/icon.png'
 
 export default function Navbar() {
 
@@ -33,27 +33,39 @@ export default function Navbar() {
   return (
     <nav>
 
-        {(BaseWidth > 600) && (
-        <ul className='List-navbar'>
-            {/* <img src={MangaEarth} alt="MangaEarth" className='img-navbar' /> */}
-            <li className='Item-navbar'>Home</li>
-            <li className='Item-navbar'>Manga</li>
-            <li className='Item-navbar'>Characters</li>
-            <li className='Item-navbar'>Contact</li>
-        </ul>
+        <div className='main-nav'>
+            <img src={icon} alt="MangaEarth" className='img-navbar' />
 
-        )}
+            {(BaseWidth > 800) && (
+            
+            <ul className='List-navbar'>
 
-        {/* Mobile */}
+                
+                <li className='Item-navbar'>Home</li>
+                <li className='Item-navbar'>Manga</li>
+                <li className='Item-navbar'>Characters</li>
+                <li className='Item-navbar'>Contact</li>
+            </ul>
 
-        {(ToggleMenu && BaseWidth < 600 && (
-            <NavbarSide modifytoggle = {modifyToggle}/>
-        ))}
+            )}
 
-        <button onClick={setToggleNav} className='btn-nav'>
-            <Hamburger color="#000" toggled={ToggleMenu}  />
-        </button>
- 
+            {/* Mobile */}
+
+            {(ToggleMenu && BaseWidth < 800 && (
+                <>
+                    <NavbarSide modifytoggle = {modifyToggle}/>
+                </>
+
+            ))}
+
+
+            
+            <button onClick={setToggleNav} className='btn-nav'>
+                <Hamburger color="#FFF" toggled={ToggleMenu}  />
+            </button>
+
+        </div>
+           
     </nav>
   )
 }
